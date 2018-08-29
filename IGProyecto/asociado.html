@@ -1,0 +1,161 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <title>IG SYSTEM</title>
+
+  </head>
+
+  <body>
+      <div id="wrapper">
+
+          <!-- Sidebar -->
+          <div id="sidebar-wrapper">
+              <nav id="spy">
+                  <ul class="sidebar-nav nav">
+                      <li class="sidebar-brand">
+                      </li>
+                      <li>
+                          <a href="index.html" data-scroll>
+                              <span class="">Proyectos</span>
+                          </a>
+                          <a href="cliente.html" data-scroll>
+                              <span class="">Clientes</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="producto.html" data-scroll>
+                              <span class="">Productos</span>
+                          </a>
+                        
+                      </li>
+                      <li>
+                          
+                        
+                      </li>
+                      <li>
+                          <a href="#anch4" data-scroll>
+                      
+                          </a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+
+    <div class="container">
+
+    <h1>Agregar Asociados</h1>
+
+    <input type="text" id="nombre" placeholder="AsociadoID" class="form-control my-3">
+
+    <input type="text" id="apellido" placeholder="Descripcion" class="form-control my-3">
+
+
+    <button class="btn btn-info" id="boton" onclick="guardar()">Guardar</button>
+
+    <hr>
+
+    <div class="container">
+       
+        <i class="fas fa-search fa-sm">
+        <input id="myInput"  onkeyup="myFunction()" class="form-control mr-sm-2" type="search" placeholder="Consulta" aria-label="Search">
+        </i>
+        </div>
+    
+    <table class="table my-3">
+
+      <thead>
+
+        <tr>
+
+        
+
+          <th scope="col">AsociadoID</th>
+
+          <th scope="col">Descripcion</th>
+
+          <th scope="col">Eliminar</th>
+
+          <th scope="col">Editar</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody id="tabla">
+
+      
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+   <script src="app4.js">
+     $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
+
+    /*Scroll Spy*/
+    $('body').scrollspy({ target: '#spy', offset:80});
+
+    /*Smooth link animation*/
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+   
+   </script>
+
+</body>
+
+</html>
